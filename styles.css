@@ -35,13 +35,14 @@ p {
 
 ul,
 li {
-    cursor: pointer;
+
     list-style: none;
     font-size: 1.4rem;
     color: white;
     font-family: 'GrammatikaRegular';
     font-weight: normal;
     text-transform: capitalize;
+    padding: 0px;
 }
 
 .header {
@@ -53,24 +54,74 @@ li {
     grid-row: 1/2;
     padding: 30px;
 }
-.user-info-top > h3 {
-    
+
+.user-info-top>h3 {
+
+    align-self: flex-start;
+    margin-top: 20px;
     font-family: 'GrammatikaRegular';
     font-weight: normal;
     font-style: normal;
     text-transform: capitalize;
+}
+.user-info-top{
+    display: grid;
+    grid-template-columns: 0.3fr 2fr;
+    grid-gap: 10px;
+}
+
+.user-info-top > .pfp-1{
+
+    background-image: url(/pfp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 1/2;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+
+}
+
+.user-info>p {
+    font-size: 1.4rem;
+    padding-top: 10px;
 
 }
 
 .user-info {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
     grid-row: 2/3;
+    grid-gap: 5px;
+}
+
+.user-info>.pfp-2 {
+    background-image: url(/pfp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
 }
 
 .side-info-top .search-bar {
 
     grid-row: 1/2;
 }
+.search-bar{
 
+    display: grid;
+    grid-template-columns: 0.1fr 4fr;
+}
+.search-bar > img{
+grid-column: 1/2;
+margin-top: 12px;
+
+}
 .search-bar>input {
     font-family: 'KarmillaRegular';
     padding: 20px;
@@ -81,6 +132,8 @@ li {
     border-radius: 30px;
     width: 70%;
     background-color: rgb(230, 230, 230);
+    min-width: 100px;
+    grid-column: 2/3;
 
 }
 
@@ -97,6 +150,14 @@ li {
 
 }
 
+.main-buttons>ul {
+
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 10px;
+}
+
 .main-buttons {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -105,9 +166,20 @@ li {
 }
 
 .main-buttons>ul>li {
-    padding-left: 20px;
+    display: grid;
+    grid-column: 2/3;
     padding-bottom: 20px;
 
+
+}
+
+
+.main-buttons>ul>img {
+    margin-left: 60%;
+    padding-right: 20px;
+    display: grid;
+    height: fit-content;
+    filter: invert(1)
 }
 
 .main-content {
@@ -170,10 +242,12 @@ li {
     font-size: 1.2rem;
     padding-bottom: 10px;
 }
-.info> .profile > h1 {
+
+.info>.profile>h1 {
     font-size: 0.9rem;
     padding-bottom: 0px;
 }
+
 .info>div>p {
 
     display: -webkit-box;
@@ -183,11 +257,12 @@ li {
     text-overflow: ellipsis;
     font-size: 0.8rem;
 }
-.buttons{
+
+.buttons {
 
     grid-gap: 30px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 button {
