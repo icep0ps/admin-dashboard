@@ -1,9 +1,7 @@
 :root {
-
     --main-color: #623CEA;
     --bg-color: #E9F1F7;
     --header-color: #F9F7F1;
-
 }
 
 * {
@@ -12,12 +10,10 @@
 }
 
 h1 {
-
     font-family: 'GrammatikaRegular';
     font-weight: normal;
     font-style: normal;
     text-transform: capitalize;
-
 }
 
 p {
@@ -26,16 +22,12 @@ p {
     font-style: normal;
     opacity: 75%;
 }
-
 .container {
-
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
-
 ul,
 li {
-
     list-style: none;
     font-size: 1.4rem;
     color: white;
@@ -43,6 +35,7 @@ li {
     font-weight: normal;
     text-transform: capitalize;
     padding: 0px;
+    cursor: pointer;
 }
 
 .header {
@@ -66,27 +59,34 @@ li {
 }
 .user-info-top{
     display: grid;
-    grid-template-columns: 0.3fr 2fr;
+    grid-template-columns: 0.3fr 0.3fr 2fr;
     grid-gap: 10px;
 }
+#alerts{
 
+    background-image: url(/notifications_active_black_24dp.svg);
+    background-position: center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    grid-column: 1/2;
+    margin-left: 10px;
+    margin-top: 17px;
+}
 .user-info-top > .pfp-1{
-
     background-image: url(/pfp.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    grid-column: 1/2;
+    grid-column: 2/3;
     height: 60px;
     width: 60px;
     border-radius: 50px;
-
 }
 
 .user-info>p {
     font-size: 1.4rem;
     padding-top: 10px;
-
 }
 
 .user-info {
@@ -94,6 +94,7 @@ li {
     grid-template-columns: 1fr 6fr;
     grid-row: 2/3;
     grid-gap: 5px;
+    min-width: 350px;
 }
 
 .user-info>.pfp-2 {
@@ -109,19 +110,19 @@ li {
 }
 
 .side-info-top .search-bar {
-
     grid-row: 1/2;
 }
-.search-bar{
 
+.search-bar{
     display: grid;
     grid-template-columns: 0.1fr 4fr;
 }
+
 .search-bar > img{
 grid-column: 1/2;
 margin-top: 12px;
-
 }
+
 .search-bar>input {
     font-family: 'KarmillaRegular';
     padding: 20px;
@@ -134,10 +135,10 @@ margin-top: 12px;
     background-color: rgb(230, 230, 230);
     min-width: 100px;
     grid-column: 2/3;
-
 }
 
 .side-menu {
+
     background-color: var(--main-color);
     grid-row: 1/4;
     grid-column: 1/2;
@@ -151,7 +152,6 @@ margin-top: 12px;
 }
 
 .main-buttons>ul {
-
     display: grid;
     height: fit-content;
     grid-template-columns: 1fr 3fr;
@@ -169,8 +169,6 @@ margin-top: 12px;
     display: grid;
     grid-column: 2/3;
     padding-bottom: 20px;
-
-
 }
 
 
@@ -193,14 +191,19 @@ margin-top: 12px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
-
 }
 
 .main-content>h1 {
     grid-column: 1/2;
     margin: 10px;
 }
+.nav-btn{
 
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 30px;
+}
 .projects {
     background-color: white;
     height: 200px;
@@ -221,7 +224,6 @@ margin-top: 12px;
 }
 
 .side-info>h1 {
-
     grid-gap: 20px;
     margin-bottom: 15px;
 }
@@ -235,20 +237,24 @@ margin-top: 12px;
     align-items: center;
     border-radius: 20px;
     margin-bottom: 30px;
-
 }
 
-.info>div>h1 {
+.info > div > h1 {
     font-size: 1.2rem;
     padding-bottom: 10px;
+    cursor: pointer;
 }
 
-.info>.profile>h1 {
-    font-size: 0.9rem;
+.info > .profile > h1 {
+    font-size: 1rem;
     padding-bottom: 0px;
 }
+.profile{
 
-.info>div>p {
+    grid-column: 2/3;
+}
+
+.info > div > p {
 
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -257,12 +263,52 @@ margin-top: 12px;
     text-overflow: ellipsis;
     font-size: 0.8rem;
 }
+#info-2{
+ 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+.info > .pfp-1{
+
+    background-image: url(/pfp\ 1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+
+
+}
+
+.info > .pfp-2{
+
+    background-image: url(/pfp.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
+
+.info > .pfp-3{
+
+    background-image: url(/pfp\ 2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
 
 .buttons {
-
     grid-gap: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
 }
 
 button {
@@ -276,4 +322,9 @@ button {
     width: 150px;
     font-size: 1.2rem;
     height: 50px;
+}
+
+img{
+
+    cursor: pointer;
 }
